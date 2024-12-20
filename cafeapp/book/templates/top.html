@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}ログイン画面{% endblock %}
+{% block content %}
+  <h1>ログイン</h1>
+  <!-- 名前入力フォーム -->
+  <form method="post">
+    {% csrf_token %}
+    <div>
+      <label for="username">お名前:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+    <br>
+    <button type="submit">送信</button>
+  </form>
+{% endblock %}
